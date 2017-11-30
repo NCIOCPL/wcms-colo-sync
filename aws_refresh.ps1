@@ -59,7 +59,7 @@ function Main() {
                                 -From $settings.settings.email.from `
                                 -To $settings.settings.email.to `
                                 -Subject $settings.settings.email.subjectLine `
-                                -BODY 'copy file failed'
+                                -BODY 'DB restore failed'
            
            return 1}
             
