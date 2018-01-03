@@ -21,7 +21,7 @@ The settings.xml needs to configured to allow the script to run:
 
 <DB connectionString="XXXX" storedprocedure="XXXXX"/>
     
-<ES server="COLOES" userid="XXX" password="XXXX"/>
+<ES server="COLOES" userid="XXX" privateKey="XXXX"/>
 
 <email server="XXXX" from="XX@XX" to="XXX@XXX" subjectLine="COLO AWS refresh failed" />
 

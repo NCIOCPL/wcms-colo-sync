@@ -66,10 +66,10 @@ function Main() {
             
        
             if ( $settings.settings.testmode -eq 1 ) { 
-            $plinkcommand = "plink.exe $($settings.settings.ES.server) -i $($settings.settings.ES.privatekey) ls "
+            $plinkcommand = "plink.exe $($settings.settings.ES.server) -i $($settings.settings.ES.privatekey) -l $($settings.settings.ES.userid) ls "
             write-host 'Start ES. here is plink': $plinkcommand
             }  else {         
-                 $plinkcommand = "plink.exe $(settings.settings.ES.server) -i $($settings.settings.ES.privatekey)  /home/elasticsearch/tools/aws_restore.sh "
+                 $plinkcommand = "plink.exe $(settings.settings.ES.server) -i $($settings.settings.ES.privatekey) -l $($settings.settings.ES.userid) /home/elasticsearch/tools/aws_restore.sh"
                  }
             
             $msg = Invoke-Expression $plinkcommand
